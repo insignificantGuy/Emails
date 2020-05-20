@@ -33,17 +33,21 @@ app.get('/', (req, res) => {
 app.post('/',url,(req,res)=>{
 	var a= req.body.name;
 	var b= req.body.email;
+  let name= a+".pdf";
+
+function f1(){
 var compiled = ejs.compile(fs.readFileSync('./views/certificate.html', 'utf8'));
 var html = compiled({ name : a });
 let options = {
 	"width":  "15.56in",
 	"height": "11.25in"
 	};
-let name= a+".pdf";
 pdf.create(html,options).toFile(name,() => {
     console.log('pdf done');
 });
+}
 
+function f2(){
 	var mailOptions = {
   	from: 'manu.rahul28@gmail.com',
   	to: b,
@@ -62,9 +66,13 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log(error);
   } else {
     console.log('Email sent');
-    res.render('index');
 }
 });
+}
+
+f1();
+setTimeout(f2,5000);
+res.render('index');
 })
 
 

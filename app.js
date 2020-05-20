@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
 app.post('/',url,(req,res)=>{
 	var a= req.body.name;
 	var b= req.body.email;
+  var text= "Hi "+a+",Welcome aboard on the panel of changemakers. We are glad to have you onboard with us";
   let name= a+".pdf";
 
 function f1(){
@@ -49,10 +50,10 @@ pdf.create(html,options).toFile(name,() => {
 
 function f2(){
 	var mailOptions = {
-  	from: 'manu.rahul28@gmail.com',
+  	from: 'Uneako',
   	to: b,
-  	subject: 'Mail from Uneako',
-  	text: 'Congratulation on completing the course',
+  	subject: 'Welcome to the Community of changemakers',
+  	text: text,
   	attachments:[
   	 {
   		filename: name,

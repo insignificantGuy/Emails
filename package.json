@@ -19,5 +19,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rahul",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insignificantGuy/Emails.git"
+  },
+  "keywords": [
+    "Email"
+  ],
+  "bugs": {
+    "url": "https://github.com/insignificantGuy/Emails/issues"
+  },
+  "homepage": "https://github.com/insignificantGuy/Emails#readme"
 }

@@ -33,6 +33,7 @@
 
       .info {
         width: 800px;
+        height: 100%;
       }
 
       .left {
@@ -48,7 +49,7 @@
         flex-direction: column;
       }
 
-      input,select{
+      .input{
           padding: 5px;
           margin-bottom: 30px;
           margin-top: 30px;

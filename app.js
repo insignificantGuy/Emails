@@ -33,7 +33,18 @@ app.get('/', (req, res) => {
 app.post('/',url,(req,res)=>{
 	var a= req.body.name;
 	var b= req.body.email;
-  var text= "Hi "+a+",Welcome aboard on the panel of changemakers. We are glad to have you onboard with us";
+  var htmls="Hi "+a+" ,<br>";
+  htmls= htmls+ "Small steps often lead to big changes. We know your small step of taking a climate pledge definitely will.<br>";
+  htmls= htmls+ "We, at Uneako, promise you so.<br><br>";
+  htmls= htmls+ "Greetings!<br><br>";
+  htmls= htmls+ "Congratulations, on taking the first step towards the Uneako earth-friendly way of life. You have proved that you are a responsible Earth citizen. Here's how you can take your commitment a step further:<br><br><br>";
+  htmls= htmls+ "1) Be a part of Ecolover community and interact with like-minded people on a mission to protect our planet Earth. Join us at,<br>";
+  htmls= htmls+ "https://www.facebook.com/groups/239039350609613/<br><br><br>";
+  htmls= htmls+ "2) You can also spread the eco-movement and ask other five people to take our pledge and join the community. This will help our small movement grow bigger.<br><br><br>";
+  htmls= htmls+ "3) Start embodying climate-positivity and eco-friendliness in your lifestyle. Explore our products at https://uneako.com/shop/ and get yourself and your near ones some innovative and never-seen-before avatars of eco-friendly goodness!.<br><br><br>";
+  htmls= htmls+ "Here's to a lasting partnership for a lasting planet.<br><br>";
+  htmls= htmls+ "Warm Regards,<br>";
+  htmls= htmls+ "Team Uneako<br>";
   let name= a+".pdf";
 
 function f1(){
@@ -53,7 +64,8 @@ function f2(){
   	from: 'Uneako',
   	to: b,
   	subject: 'Welcome to the Community of changemakers',
-  	text: text,
+    text:"Hello, Changemaker",
+    html:htmls,
   	attachments:[
   	 {
   		filename: name,
